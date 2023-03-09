@@ -1,6 +1,6 @@
 # 16s-rRNA-alignment
 
-In this small project, I will describe how the samples were prepared and aligned to a template 16rDNA, and also how to use the sample visualization web app of the repo.
+In this small project, I will describe how the samples were prepared and aligned to a template 16rDNA, and also how to use the sample visualization web app of the repo. The point of this is to visually see how variable regions of 16S rRNA vay between species.
 
 ### How to deploy web app
 
