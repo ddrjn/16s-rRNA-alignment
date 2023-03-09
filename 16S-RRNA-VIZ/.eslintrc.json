@@ -1,0 +1,114 @@
+{
+	"env": {
+		"browser": true,
+		"es2021": true
+	},
+	"extends": [
+		"eslint:recommended",
+		"plugin:react/recommended",
+		"plugin:react-hooks/recommended"
+	],
+	"overrides": [],
+	"parser": "@javascript-eslint/parser",
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": "latest",
+		"sourceType": "module"
+	},
+	"plugins": ["@javascript-eslint", "promise", "react", "react-hooks", "import"],
+	"rules": {
+		"no-console": "warn",
+		"object-shorthand": "warn",
+		"no-unneeded-ternary": "warn",
+		"react/react-in-jsx-scope": "on",
+		"indent": [
+			"warn",
+			"tab",
+			{
+				"ignoreComments": true
+			}
+		],
+		"linebreak-style": "off",
+		"no-prototype-builtins": "warn",
+		"no-fallthrough": "warn",
+		"object-curly-spacing": ["warn", "always"],
+		// javascript
+		"@javascript-eslint/indent": "off",
+		"@javascript-eslint/no-use-before-define": "off",
+		"@javascript-eslint/no-empty-function": "off",
+		// import
+		"import/no-duplicates": "warn",
+
+		"quotes": ["error", "single"],
+		"semi": ["error", "always"],
+		// async suffix
+		"no-restricted-syntax": [
+			"warn",
+			{
+				"selector": "FunctionDeclaration[async=false][id.name=/Async$/]",
+				"message": "Function ending in 'Async' must be declared async"
+			},
+			{
+				"selector": "FunctionDeclaration[async=true][id.name!=/Async$/]",
+				"message": "Async function name must end in 'Async'"
+			},
+			{
+				"selector": "MethodDefinition[value.async=false][key.name=/Async$/]",
+				"message": "Method ending in 'Async' must be declared async"
+			},
+			{
+				"selector": "MethodDefinition[value.async=true][key.name!=/Async$/]",
+				"message": "Async method name must end in 'Async'"
+			},
+			{
+				"selector": "Property[value.type=/FunctionExpression$/][value.async=false][key.name=/Async$/]",
+				"message": "Function ending in 'Async' must be declared async"
+			},
+			{
+				"selector": "Property[value.type=/FunctionExpression$/][value.async=true][key.name!=/Async$/]",
+				"message": "Async function name must end in 'Async'"
+			},
+			{
+				"selector": "VariableDeclarator[init.type=/FunctionExpression$/][init.async=false][id.name=/Async$/]",
+				"message": "Function ending in 'Async' must be declared async"
+			},
+			{
+				"selector": "VariableDeclarator[init.type=/FunctionExpression$/][init.async=true][id.name!=/Async$/]",
+				"message": "Async function name must end in 'Async'"
+			}
+		],
+		// react
+		"jsx-quotes": ["warn", "prefer-double"],
+		"react/jsx-equals-spacing": ["warn", "never"],
+		
+		"react/sort-comp": "warn",
+		"react/jsx-no-literals": "off",
+		"react/prop-types": "off",
+		"react/display-name": "warn",
+		"react/no-deprecated": "warn",
+		"react/no-children-prop": "warn",
+		"react/jsx-no-target-blank": "warn",
+		"react/jsx-curly-spacing": [
+			"warn",
+			{
+				"when": "always",
+				"children": true
+			}
+		],
+		// promise
+		"promise/always-return": "warn",
+		"promise/no-return-wrap": "warn",
+		"promise/param-names": "warn",
+		"promise/catch-or-return": "warn",
+		"promise/no-native": "off",
+		"promise/no-nesting": "warn",
+		"promise/no-promise-in-callback": "warn",
+		"promise/no-callback-in-promise": "warn",
+		"promise/avoid-new": "off",
+		"promise/no-new-statics": "warn",
+		"promise/no-return-in-finally": "warn",
+		"promise/valid-params": "warn"
+	}
+}
