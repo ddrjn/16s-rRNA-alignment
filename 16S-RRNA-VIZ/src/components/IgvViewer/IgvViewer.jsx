@@ -23,6 +23,14 @@ export const IgvViewer = () => {
 					displayMode: 'SQUISHED',
 					autoHeight: false,
 				},
+				{
+					url: '/primers.bed',
+					type: 'annotation',
+					name: 'Primers',
+					colorBy: 'biotype',
+					format: 'bed',
+					displayMode: 'expanded',
+				},
 			],
 		},
 	};
