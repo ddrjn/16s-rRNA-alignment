@@ -1,2 +1,2 @@
 export { Header } from './Header';
-export { IgvViewer } from './IgvViewer';
+export { IgvViewer, IgvViewerSeparate } from './IgvViewer';

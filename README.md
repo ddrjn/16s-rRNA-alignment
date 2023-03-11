@@ -19,6 +19,13 @@ That is it, it will deploy a server on (most likely) `http://127.0.0.1:5173/`. G
 
 ![Preview](/assets/preview.png)
 
+
+### Separate Alignments View.
+
+There is also an example with separate alignments option, where each alignment is displayed separately. when you deploy the app, in the middle there will be a button "Switch to separate alignments view". you can click on it to display an example of 9 sample alignments separately, similar to this:
+
+![Preview](/assets/preview_separate.png)
+
 ### Data Preparation:
 
 in the paper ['Chronic alcohol-induced dysbiosis of the gut microbiota and gut metabolites impairs sperm quality in mice'](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9751024/), among many other things, authors use 16S rRNA sequencing to detect microbiota compsition in (control and alcoholic) guts of mice. To do so, they use the mice fecal matter for their source. authors have generated gigabytes of data, but for this project, we are going to use very small ammount.

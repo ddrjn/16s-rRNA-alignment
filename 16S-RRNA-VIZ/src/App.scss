@@ -2,4 +2,30 @@ body {
 	width: 100%;
 	overflow-x: hidden;
 	background-image: linear-gradient(to right, #af6ae350, #926ae950);
+	padding-top: 90px;
+}
+.state-button-container {
+	display: flex;
+	height: 50px;
+	align-items: center;
+	justify-content: center;
+	button {
+		font-size: 15px;
+		line-height: 20px;
+		padding: 6px 12px;
+		border-radius: 8px;
+		border: none;
+		outline: none;
+		cursor: pointer;
+		background-color: aliceblue;
+		transition: all 0.2s ease;
+		color: #1e1e1e;
+		&:hover:not(:disabled) {
+			background-color: rgba(180, 249, 249, 0.3);
+		}
+
+		&:active:not(:disabled) {
+			background-color: rgba(180, 249, 249, 0.7);
+		}
+	}
 }

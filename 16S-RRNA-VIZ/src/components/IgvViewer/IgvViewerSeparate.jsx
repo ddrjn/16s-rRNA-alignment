@@ -1,7 +1,7 @@
 import igv from 'igv';
 import React, { useEffect, useRef } from 'react';
 import './IgvViewer.scss';
-export const IgvViewer = () => {
+export const IgvViewerSeparate = () => {
 	const containerRef = useRef(null);
 	const options = {
 		locus: 'NR_024570.1:330-780',
@@ -10,19 +10,21 @@ export const IgvViewer = () => {
 			fastaURL: '/ecoli.fasta',
 			indexed: false,
 			tracks: [
-				{
+				...new Array(9).fill(0).map((n, i) => ({
 					sourceType: 'file',
-					name: '16S rDNA samples',
-					url: '/output.bam',
+					name: `Sample ${i + 1}`,
+					url: `/example2/sample${i + 1}.bam`,
 					format: 'bam',
-					indexURL: '/output.bam.bai',
+					indexed: false,
 					type: 'alignment',
 					order: Number.MAX_VALUE,
 					visibilityWindow: 300000000,
-					height: 400,
-					displayMode: 'SQUISHED',
+					height: 30,
+					displayMode: 'EXPANDED',
 					autoHeight: false,
-				},
+					showCoverage: false,
+				})),
+
 				{
 					url: '/primers.bed',
 					type: 'annotation',
@@ -30,6 +32,7 @@ export const IgvViewer = () => {
 					colorBy: 'biotype',
 					format: 'bed',
 					displayMode: 'expanded',
+					order: 1,
 					height: 50,
 				},
 			],
