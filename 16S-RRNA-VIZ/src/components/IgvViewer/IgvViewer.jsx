@@ -1,5 +1,6 @@
 import igv from 'igv';
 import React, { useEffect, useRef } from 'react';
+import { colorByPosition } from './anotationColorFunc';
 import './IgvViewer.scss';
 export const IgvViewer = () => {
 	const containerRef = useRef(null);
@@ -26,11 +27,15 @@ export const IgvViewer = () => {
 				{
 					url: '/primers.bed',
 					type: 'annotation',
-					name: 'Primers',
+					name: 'Annotations',
 					colorBy: 'biotype',
 					format: 'bed',
 					displayMode: 'expanded',
 					height: 50,
+					color: feature => {
+						const position = feature.getAttributeValue('start') ?? 0;
+						return colorByPosition(position);
+					},
 				},
 			],
 		},
